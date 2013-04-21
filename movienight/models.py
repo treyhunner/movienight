@@ -12,6 +12,9 @@ class Person(db.Model):
     name = db.Column(db.String(30), index=True, unique=True)
     picks = db.relationship('Event', backref='picker', lazy='dynamic')
 
+    def __unicode__(self):
+        return self.name
+
     def __repr__(self):
         return "<Person %r>" % self.name
 
@@ -23,6 +26,9 @@ class Event(db.Model):
     picker_id = db.Column(db.Integer, db.ForeignKey('person.id'))
     attendees = db.relationship('Person', secondary=attendance,
                                 backref=db.backref('events', lazy='dynamic'))
+
+    def __unicode__(self):
+        return self.movie
 
     def __repr__(self):
         return "<Event %r>" % self.movie

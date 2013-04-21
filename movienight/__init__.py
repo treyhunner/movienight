@@ -5,4 +5,4 @@ app = Flask(__name__)
 app.config.from_object('movienight.config')
 db = SQLAlchemy(app)
 
-from movienight import views, models
+from movienight import views, models, admin
