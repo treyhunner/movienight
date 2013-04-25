@@ -1,0 +1,19 @@
+{% extends 'admin/master.html' %}
+
+{% block body %}
+
+People:
+<ul>
+{% for person in people %}
+  <li>{{ person }}: <b>{{ person.score }}</b></li>
+{% endfor %}
+</ul>
+
+Movies:
+<ul>
+{% for event in events %}
+  <li>{{ event }}</li>
+{% endfor %}
+</ul>
+
+{% endblock %}
