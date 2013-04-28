@@ -8,6 +8,13 @@ from movienight import app, db
 from movienight.models import Person, Event
 
 
+class ScoreTest(unittest.TestCase):
+
+    def test_empty_event_list(self):
+        danielle = Person(name="Danielle")
+        self.assertEqual(danielle.score, 'N/A')
+
+
 class AdminTest(unittest.TestCase):
 
     def setUp(self):
