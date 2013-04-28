@@ -12,6 +12,10 @@ class Person(db.Model):
     name = db.Column(db.String(30), index=True, unique=True)
     picks = db.relationship('Event', backref='picker', lazy='dynamic')
 
+    @property
+    def recent_picks(self):
+        return [unicode(pick) for pick in self.picks.order_by('-date')[:3]]
+
     def __unicode__(self):
         return self.name
 
