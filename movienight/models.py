@@ -19,11 +19,10 @@ class Person(db.Model):
 
     @property
     def score(self):
-        score = 0
-        for e in self.events:
-            score += 1/len(e.attendees)
-            if e.picker_id == self.id:
-                score -= 1
+        score = sum(1/len(e.attendees)for e in self.events) - len(self.picks.all())
+        if len(self.picks.all()) == 0 and score < 1:
+            score = 'N/A'
+            return score
         return int(round(score*100))
 
     def __unicode__(self):
