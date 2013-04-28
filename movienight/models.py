@@ -16,6 +16,15 @@ class Person(db.Model):
     def recent_picks(self):
         return [unicode(pick) for pick in self.picks.order_by('-date')[:3]]
 
+    @property
+    def score(self):
+        score = 0
+        for e in self.events:
+            score += 1/len(e.attendees)
+            if e.picker_id == self.id:
+                score -= 1
+        return score
+
     def __unicode__(self):
         return self.name
 
