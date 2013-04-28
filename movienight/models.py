@@ -1,5 +1,6 @@
-from movienight import db
+from __future__ import division
 
+from movienight import db
 
 attendance = db.Table('attendance', db.Model.metadata,
     db.Column('person_id', db.Integer, db.ForeignKey('person.id')),
@@ -23,7 +24,7 @@ class Person(db.Model):
             score += 1/len(e.attendees)
             if e.picker_id == self.id:
                 score -= 1
-        return score
+        return int(round(score*100))
 
     def __unicode__(self):
         return self.name

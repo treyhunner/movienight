@@ -5,7 +5,7 @@ from movienight import db, app, models
 
 
 class PersonView(ModelView):
-    column_list = ('name', 'recent_picks')
+    column_list = ('name', 'recent_picks', 'score')
 
 
 class EventView(ModelView):
