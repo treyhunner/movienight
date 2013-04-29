@@ -15,7 +15,7 @@ class Person(db.Model):
 
     @property
     def recent_picks(self):
-        return [unicode(pick) for pick in self.picks.order_by('-date')[:3]]
+        return [unicode(pick) for pick in self.picks.order_by('date desc')[:3]]
 
     @property
     def score(self):

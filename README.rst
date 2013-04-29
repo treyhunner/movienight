@@ -32,6 +32,27 @@ Tools
 - `SQLAlchemy`_ (with `Flask-SQLAlchemy`_)
 - `Flask-Admin`_
 
+Runinng Tests
+-------------
+
+To run the tests first install the test dependencies:
+
+.. code-block:: bash
+
+    $ pip install -r test_requirements.txt
+
+Run the tests by executing the ``tests.py`` file:
+
+.. code-block:: bash
+
+    $ ./tests.py
+
+To run an individual test use this format:
+
+.. code-block:: bash
+
+    $ python -m unittest tests.AdminTest.test_create_event
+
 .. _Flask: http://flask.pocoo.org/
 .. _SQLAlchemy: http://www.sqlalchemy.org/
 .. _Flask-SQLAlchemy: http://pythonhosted.org/Flask-SQLAlchemy/
