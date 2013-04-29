@@ -1,5 +1,11 @@
+# Flask requirements
 Flask==0.9
 Flask-SQLAlchemy==0.16
 Flask-Admin==1.0.5
+
+# Test requirements
+WebTest==2.0.5
+
+# Heroku requirements
 gunicorn==0.17.4
 psycopg2==2.5

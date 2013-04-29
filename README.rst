@@ -35,12 +35,6 @@ Tools
 Runinng Tests
 -------------
 
-To run the tests first install the test dependencies:
-
-.. code-block:: bash
-
-    $ pip install -r test_requirements.txt
-
 Run the tests by executing the ``tests.py`` file:
 
 .. code-block:: bash
