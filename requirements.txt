@@ -5,6 +5,7 @@ Flask-Admin==1.0.5
 
 # Test requirements
 WebTest==2.0.5
+coverage==3.6
 
 # Heroku requirements
 gunicorn==0.17.4
