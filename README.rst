@@ -1,6 +1,14 @@
 Movie Night Turn Tracker
 ========================
 
+.. image:: https://secure.travis-ci.org/treyhunner/movienight.png?branch=master
+   :target: http://travis-ci.org/treyhunner/movienight
+   :alt: Test Status
+.. image:: https://coveralls.io/repos/treyhunner/movienight/badge.png?branch=master
+   :target: https://coveralls.io/r/treyhunner/movienight
+   :alt: Coverage Status
+
+
 This repository will contain code for a website that will track who should
 pick next for movie night.
 
