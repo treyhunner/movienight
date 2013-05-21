@@ -1,11 +1,4 @@
-# Flask requirements
-Flask==0.9
-Flask-SQLAlchemy==0.16
-Flask-Admin==1.0.5
-
-# Test requirements
-WebTest==2.0.5
-coverage==3.6
+-r dev_requirements.txt
 
 # Heroku requirements
 gunicorn==0.17.4

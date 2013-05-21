@@ -19,7 +19,7 @@ Before you can run the website you will need to install the dependencies:
 
 .. code-block:: bash
 
-    $ pip install -r requirements.txt
+    $ pip install -r requirements-dev.txt
 
 Once you have the required dependencies you should create the database file:
 
