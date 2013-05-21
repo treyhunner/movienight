@@ -24,6 +24,7 @@ class EventView(ModelView):
     column_sortable_list = ('date', 'movie', ('picker', models.Person.name))
     column_searchable_list = ('movie',)
     column_filters = ('picker',)
+    column_default_sort = ('date', True)
 
 
 admin = Admin(app, name="Movie Night", index_view=MyHomeView())
