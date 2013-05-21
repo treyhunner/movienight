@@ -1,4 +1,4 @@
--r dev_requirements.txt
+-r requirements-dev.txt
 
 # Heroku requirements
 gunicorn==0.17.4
