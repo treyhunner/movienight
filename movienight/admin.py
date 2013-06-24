@@ -1,9 +1,11 @@
 from flask.ext.admin import Admin
 from flask.ext.admin.base import expose, AdminIndexView
 from flask.ext.admin.contrib.sqlamodel import ModelView
+from flask.ext.admin.contrib.fileadmin import FileAdmin
 
 from movienight import db, app, models
 
+import os.path as op
 
 class MyHomeView(AdminIndexView):
     @expose('/')
@@ -32,3 +34,6 @@ admin = Admin(app, name="Movie Night", index_view=MyHomeView())
 
 admin.add_view(PersonView(models.Person, db.session, endpoint='person'))
 admin.add_view(EventView(models.Event, db.session, endpoint='event'))
+
+path = op.dirname(__file__)
+admin.add_view(FileAdmin(path, 'movienight', name = 'Files'))
