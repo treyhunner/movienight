@@ -21,7 +21,7 @@ class Person(db.Model):
     def score(self):
         score = int(round((sum(1 / len(e.attendees) for e in self.events)
             - len(self.picks.all())) * 100))
-        if self.picks.count() == 0 and score < 75:
+        if self.picks.count() == 0 and score < 50:
             score = 'N/A'
         return score
 
